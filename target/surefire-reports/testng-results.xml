@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="All Test Suite" duration-ms="13499" started-at="2023-03-06T19:34:39 IST" finished-at="2023-03-06T19:34:52 IST">
+    <groups>
+    </groups>
+    <test name="D:/HydridFramework/src/test/java/testcases/LoginTest.java" duration-ms="13499" started-at="2023-03-06T19:34:39 IST" finished-at="2023-03-06T19:34:52 IST">
+      <class name="testcases.LoginTest">
+        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:testcases.LoginTest@54c562f7]" name="setUpBrowser" is-config="true" duration-ms="7192" started-at="2023-03-06T19:34:40 IST" finished-at="2023-03-06T19:34:47 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBrowser -->
+        <test-method status="PASS" signature="loginToApplication(java.lang.String, java.lang.String)[pri:0, instance:testcases.LoginTest@54c562f7]" name="loginToApplication" duration-ms="437" started-at="2023-03-06T19:34:47 IST" data-provider="logincred" finished-at="2023-03-06T19:34:48 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin@email.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testcases.LoginTest@54c562f7]" name="closeBrowser" is-config="true" duration-ms="740" started-at="2023-03-06T19:34:48 IST" finished-at="2023-03-06T19:34:49 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="setUpBrowser()[pri:0, instance:testcases.LoginTest@54c562f7]" name="setUpBrowser" is-config="true" duration-ms="2354" started-at="2023-03-06T19:34:49 IST" finished-at="2023-03-06T19:34:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBrowser -->
+        <test-method status="PASS" signature="loginToApplication(java.lang.String, java.lang.String)[pri:0, instance:testcases.LoginTest@54c562f7]" name="loginToApplication" duration-ms="386" started-at="2023-03-06T19:34:51 IST" data-provider="logincred" finished-at="2023-03-06T19:34:51 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sunil@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sunil123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testcases.LoginTest@54c562f7]" name="closeBrowser" is-config="true" duration-ms="709" started-at="2023-03-06T19:34:52 IST" finished-at="2023-03-06T19:34:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testcases.LoginTest -->
+    </test> <!-- D:/HydridFramework/src/test/java/testcases/LoginTest.java -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
