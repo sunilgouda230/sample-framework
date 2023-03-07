@@ -1,19 +1,16 @@
 package utility;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.io.FileHandler;
-import org.openqa.selenium.safari.SafariDriver;
-import org.testng.Reporter;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.time.Duration;
 import java.util.Date;
+import java.util.List;
 
 public class Helper {
+
     public static String waitForTextPresent(WebDriver driver, int timeout, String text, By locator) {
 
             for (int i = 0; i < timeout; i++) {
@@ -83,6 +80,56 @@ public class Helper {
                 waitForSeconds(3);
             }
         }
+    }
+
+    public static void uploadFile(WebDriver driver){
+        WebElement upload_file = driver.findElement(By.xpath("//input[@type='file']"));
+        upload_file.sendKeys(System.getProperty("user.dir")+"\\dummyfile\\selenium.png");
+    }
+
+    public static void datePicker(WebDriver driver, String start, String end, String month, By startdate, By enddate){
+        driver.findElement(startdate).click();
+        while (!driver.findElement(By.xpath("//div[contains(@class,'current-month')]")).getText().contains(month)){
+            String curMonth = driver.findElement(By.xpath("//div[contains(@class,'current-month')]")).getText();
+            if (curMonth.contains(month)){
+                break;
+            }
+            driver.findElement(By.xpath("//span[contains(text(),'Next Month')]//parent::button")).click();
+
+        }
+        selectDate(driver,start,month);
+
+        driver.findElement(enddate).click();
+        while (!driver.findElement(By.xpath("//div[contains(@class,'current-month')]")).getText().contains(month)){
+            String curMonth = driver.findElement(By.xpath("//div[contains(@class,'current-month')]")).getText();
+            if (curMonth.contains(month)){
+                break;
+            }
+            driver.findElement(By.xpath("//span[contains(text(),'Next Month')]//parent::button")).click();
+
+        }
+        selectDate(driver,end,month);
+    }
+
+    public static void selectDate(WebDriver driver,String date, String month){
+        List<WebElement> dates = driver.findElements(By.xpath("//div[@aria-disabled='false' and contains(@aria-label,'"+month+"')]"));
+        for (WebElement selectdate: dates) {
+            if (selectdate.getText().contains(date)){
+                selectdate.click();
+                System.out.println("Info LOG:"+month+" date got selected");
+                break;
+            }
+        }
+    }
+
+    public static void scroll(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scroll(0,900)");
+    }
+
+    public static void scrollInToVeiw(WebDriver driver, WebElement ele){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);",ele);
     }
 
 }
