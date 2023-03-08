@@ -9,4 +9,10 @@ public class CustomDataProvider {
         Object [][] arr = ExcelReader.readExcel("login");
         return arr;
     }
+
+    @DataProvider(name = "addanddelete")
+    public Object [][]  readdataforaddproduct(){
+        Object [][] arr = ExcelReader.readExcel("addanddelete");
+        return arr;
+    }
 }

@@ -15,4 +15,15 @@
             </class>
         </classes>
     </test>
+
+    <test verbose="2" thread-count="3"
+          name="D:/HydridFramework/src/test/java/testcases/AddandDelete.java">
+        <classes>
+            <class name="testcases.AddandDelete">
+                <methods>
+                    <include name="addAndDelete"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite>
