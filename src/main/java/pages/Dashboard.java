@@ -76,6 +76,7 @@ public class Dashboard {
             wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.xpath("//table[contains(@class,'courses')]//following::tr//td[text()='"+coursename+"']")),coursename));
             driver.findElement(By.xpath("//table[contains(@class,'courses')]//following::tr//td[text()='"+coursename+"']//..//input")).click();
            driver.findElement(By.xpath("//table[contains(@class,'courses')]//following::tr//td[text()='"+coursename+"']//..//button")).click();
+           Helper.waitForSeconds(4);
         }
         if (wait.until(ExpectedConditions.invisibilityOfElementWithText(By.xpath("//td[contains(text(),'"+coursename+"')]"),coursename))){
             System.out.println("INFO LOG:"+coursename +""+"is deleted");
