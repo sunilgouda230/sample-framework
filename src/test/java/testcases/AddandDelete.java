@@ -11,7 +11,7 @@ public class AddandDelete extends BaseClass {
     public void addAndDelete(String username, String password, String message,String coursename, String desc, String instructor,
                              String amount, String startdate, String enddate, String category, String month){
        Login loginTest = new Login(driver);
-       loginTest.loginToApplication(username,password,message,"correct cred")
+       loginTest.loginToApplication(username,password,message,"correct credential")
                .hoverOnManageandSelect()
                .clickManageCourses().addNewCorse(coursename,desc,instructor,amount,startdate,enddate,category,month);
 
