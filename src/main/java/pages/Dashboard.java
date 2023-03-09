@@ -79,7 +79,7 @@ public class Dashboard {
            Helper.waitForSeconds(4);
         }
         if (wait.until(ExpectedConditions.invisibilityOfElementWithText(By.xpath("//td[contains(text(),'"+coursename+"')]"),coursename))){
-            System.out.println("INFO LOG:"+coursename +""+"is deleted");
+            System.out.println("INFO LOG:"+coursename +" "+"Course is deleted");
         }
         return new Dashboard(driver);
     }
