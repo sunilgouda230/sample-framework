@@ -2,6 +2,7 @@ package browserfactory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -17,15 +18,17 @@ public class BrowserFactory {
 
     public static WebDriver selectBrowser(String browser, String applicationurl){
         System.out.println("LogInfo: Setting Up the Browser");
+        ChromeOptions opt = new ChromeOptions();
+        opt.addArguments("--remote-allow-origins=*");
 
         if (browser.equalsIgnoreCase("chrome")){
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(opt);
         } else if (browser.equalsIgnoreCase("firefox")){
             driver = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("safari")){
             driver = new SafariDriver();
         } else {
-           driver = new ChromeDriver();
+           driver = new ChromeDriver(opt);
         }
 
         driver.manage().window().maximize();
