@@ -4,7 +4,6 @@
     <listeners>
         <listener class-name="listeners.ExtentTestNGITestListener"/>
     </listeners>
-
     <test verbose="2" thread-count="3"
           name="D:/HydridFramework/src/test/java/testcases/LoginTest.java">
         <classes>
@@ -15,7 +14,6 @@
             </class>
         </classes>
     </test>
-
     <test verbose="2" thread-count="3"
           name="D:/HydridFramework/src/test/java/testcases/AddandDelete.java">
         <classes>
