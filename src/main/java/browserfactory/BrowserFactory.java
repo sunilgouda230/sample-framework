@@ -19,7 +19,11 @@ public class BrowserFactory {
     public static WebDriver selectBrowser(String browser, String applicationurl){
         System.out.println("LogInfo: Setting Up the Browser");
         ChromeOptions opt = new ChromeOptions();
+
+        opt.addArguments("--headless");
+        opt.addArguments("--no-sandbox");
         opt.addArguments("--remote-allow-origins=*");
+
 
         if (browser.equalsIgnoreCase("chrome")){
             driver = new ChromeDriver(opt);
